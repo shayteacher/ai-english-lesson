@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI + You = Better English | Coach Shay</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a href="#home" class="nav-brand">Coach Shay</a>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#poll">Poll</a>
+        <a href="#tools">The Tools</a>
+        <a href="#stage">Set The Stage</a>
+        <a href="#demo">Demo</a>
+        <a href="#practice">Mission</a>
+        <a href="#debrief">Debrief</a>
+        <a href="#homework">Homework</a>
+        <a href="#" class="nav-qr" id="qr-btn">QR Code</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home">
+      <h1>AI + You =<br />Better English</h1>
+      <p>
+        Today we learn how to <strong>talk</strong> to AI. Not just use it. Talk
+        to it. And get something actually interesting back.
+      </p>
+
+      <!-- MISSION CARD -->
+      <div class="mission-card">
+        <h3>Your Mission Today</h3>
+        <ul class="mission-lines">
+          <li>Follow along.</li>
+          <li>Share your result.</li>
+          <li>Say one thing out loud.</li>
+        </ul>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- POLL -->
+    <div class="section-full" id="poll">
+      <div class="inner">
+        <div class="section-label">Quick Check</div>
+        <h2 class="section-title">Where Do You Fit?</h2>
+        <p>
+          Pew Research Center surveyed thousands of teenagers worldwide about
+          how they use AI. Answer honestly. No wrong answers. Let's see where
+          you fit in the global numbers.
+        </p>
+        <div id="poll-container"></div>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- TOOLS -->
+    <div class="section-full section-alt" id="tools">
+      <div class="inner">
+        <div class="section-label">The AI Tools</div>
+        <h2 class="section-title">Tools You Should Know</h2>
+
+        <div class="tools-note">
+          <strong>Having trouble logging in?</strong> Skip the signup. Go
+          straight to <strong>ChatGPT</strong> or <strong>Claude</strong>. They
+          are the most reliable in this classroom without an account.
+        </div>
+
+        <div class="tool-grid">
+          <a href="https://chatgpt.com" target="_blank" class="tool-card">
+            <span class="tool-name">ChatGPT</span>
+            <span class="tool-desc"
+              >By OpenAI. The most famous one. Start here if unsure.</span
+            >
+          </a>
+          <a href="https://claude.ai" target="_blank" class="tool-card">
+            <span class="tool-name">Claude</span>
+            <span class="tool-desc"
+              >By Anthropic. Great for writing and nuance.</span
+            >
+          </a>
+          <a href="https://gemini.google.com" target="_blank" class="tool-card">
+            <span class="tool-name">Gemini</span>
+            <span class="tool-desc">By Google. Connected to the internet.</span>
+          </a>
+          <a href="https://kimi.ai" target="_blank" class="tool-card">
+            <span class="tool-name">Kimi</span>
+            <span class="tool-desc"
+              >Great for long documents and research.</span
+            >
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- SET THE STAGE -->
+    <div class="section-full" id="stage">
+      <div class="inner">
+        <div class="section-label">Concept 01</div>
+        <h2 class="section-title">Setting the Stage</h2>
+        <p>
+          Think about a theatre. An empty stage gives you nothing to work with.
+          A full stage with costumes, lights, and a story tells you exactly what
+          world you are entering. Your AI prompt works the same way.
+        </p>
+
+        <div class="stage-grid">
+          <div class="stage-card">
+            <img src="emptyStage.png" alt="Empty stage" />
+            <div class="stage-card-label">Empty Stage. No context.</div>
+          </div>
+          <div class="stage-card">
+            <img src="fullStage.png" alt="Full stage" />
+            <div class="stage-card-label">
+              Full Stage. Characters. Story. Setting.
+            </div>
+          </div>
+        </div>
+
+        <!-- Dress Compare Slider -->
+        <div class="dress-toggle-wrap">
+          <p class="dress-toggle-label">
+            Same designer. Same model. Different instructions. Drag to compare.
+          </p>
+          <div class="dress-slider-container" id="dress-slider">
+            <!-- Base image: Good Instructions (right side, full width) -->
+            <img
+              class="dress-slider-base"
+              src="dressCompare.jpeg"
+              alt="Good instructions"
+              id="dress-img-right"
+            />
+            <!-- Overlay: Bad Instructions (left side, clipped) -->
+            <div class="dress-slider-overlay" id="dress-overlay">
+              <img
+                src="dressCompare.jpeg"
+                alt="Bad instructions"
+                id="dress-img-left"
+              />
+            </div>
+            <!-- Handle -->
+            <div class="dress-slider-handle" id="dress-handle">
+              <div class="dress-slider-knob">&#8596;</div>
+            </div>
+            <span class="dress-slider-label-left">Bad Instructions</span>
+            <span class="dress-slider-label-right">Good Instructions</span>
+            <div class="dress-slider-dimmer" id="dress-dimmer"></div>
+          </div>
+          <p class="dress-reveal-hint">
+            Drag the slider left or right. The detail you give changes
+            everything.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- DEMO -->
+    <div class="section-full section-alt" id="demo">
+      <div class="inner">
+        <div class="section-label">Concept 02</div>
+        <h2 class="section-title">Same Question. Different Answer.</h2>
+        <p>
+          We ask the AI what the word <strong>destination</strong> means. Two
+          ways. Copy one. Paste it into your AI. Read the answer out loud.
+        </p>
+
+        <div class="prompt-compare">
+          <div class="prompt-box boring">
+            <span class="prompt-box-label">The Boring Prompt</span>
+            <div class="prompt-text" id="boring-prompt">
+              "Explain to me in one sentence what the word destination is."
+            </div>
+            <button
+              class="copy-btn boring-btn"
+              onclick="copyAssembled('boring-prompt', this)"
+            >
+              Copy This Prompt
+            </button>
+          </div>
+
+          <div class="prompt-box staged">
+            <span class="prompt-box-label">The Staged Prompt</span>
+            <div class="prompt-text" id="staged-prompt">
+              "You are a pirate who has sailed the seven seas. You have sailed
+              all the blue water of this world. In one sentence, tell me what
+              the word destination means to you."
+            </div>
+            <button
+              class="copy-btn staged-btn"
+              onclick="copyAssembled('staged-prompt', this)"
+            >
+              Copy This Prompt
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- PRACTICE: SECRET AGENT SABOTAGE -->
+    <div class="section-full" id="practice">
+      <div class="inner">
+        <div class="section-label">Mission Active</div>
+        <h2 class="section-title">Secret Agent Sabotage</h2>
+
+        <div class="spy-intro">
+          You are a <strong>Secret Agent</strong>. Your animal partner must
+          create a distraction so you can sneak past the guard. Choose your
+          partner. Choose your strategy. The AI will tell you exactly how it
+          plays out.
+        </div>
+
+        <div class="practice-card">
+          <div class="spy-form">
+            <!-- Field 1 -->
+            <div class="spy-field">
+              <label for="spy-animal">Choose Your Animal Partner</label>
+              <select id="spy-animal">
+                <option value="">-- Select your partner --</option>
+                <option value="0">A dramatic pigeon</option>
+                <option value="1">A very chill capybara</option>
+                <option value="2">An angry fluffy kitten</option>
+                <option value="3">A tiny tactical hamster</option>
+                <!-- HIDDEN -- remove style="display:none" to activate -->
+                <option value="4" style="display: none">Hidden Animal 5</option>
+                <option value="5" style="display: none">Hidden Animal 6</option>
+              </select>
+            </div>
+
+            <!-- Field 2 -->
+            <div class="spy-field">
+              <label for="spy-distraction"
+                >Choose Your Distraction Strategy</label
+              >
+              <select id="spy-distraction">
+                <option value="">-- Select your strategy --</option>
+                <option value="0">Blasting K-Pop music at full volume</option>
+                <option value="1">
+                  Throwing a wet, single slice of cheese
+                </option>
+                <option value="2">Pretending to fall down over and over</option>
+                <option value="3">Doing a terrible, chaotic breakdance</option>
+                <!-- HIDDEN -- remove style="display:none" to activate -->
+                <option value="4" style="display: none">
+                  Hidden Distraction 5
+                </option>
+                <option value="5" style="display: none">
+                  Hidden Distraction 6
+                </option>
+              </select>
+            </div>
+
+            <!-- Prompt preview -->
+            <div>
+              <label
+                class="spy-field"
+                style="
+                  display: block;
+                  font-family: Arial, sans-serif;
+                  font-size: 18px;
+                  font-weight: bold;
+                  letter-spacing: 0.1em;
+                  text-transform: uppercase;
+                  color: var(--yellow);
+                  margin-bottom: 10px;
+                "
+                >The Prompt You Are Sending</label
+              >
+              <div
+                class="spy-prompt-preview placeholder"
+                id="spy-prompt-display"
+              >
+                Your mission briefing will appear here...
+              </div>
+            </div>
+
+            <!-- Submit -->
+            <button id="spy-submit" disabled>Send to AI &rarr;</button>
+
+            <!-- Result -->
+            <div id="spy-result">
+              <div class="result-header">AI Response -- Mission Report</div>
+              <p id="spy-result-text"></p>
+            </div>
+
+            <!-- Paste box -->
+            <div class="paste-box-wrap">
+              <span class="paste-box-label"
+                >Paste your favorite result here to show Coach Shay</span
+              >
+              <textarea
+                class="paste-box"
+                placeholder="Copy your best result and paste it here..."
+              ></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- DEBRIEF -->
+    <div class="section-full section-alt" id="debrief">
+      <div class="inner">
+        <div class="section-label">Debrief</div>
+        <h2 class="section-title">What Just Happened</h2>
+
+        <ul class="tip-list">
+          <li>
+            <span class="tip-number">1</span>
+            <span
+              ><strong>Context gets you better answers.</strong> A vague
+              question gets a vague answer. A detailed stage gets a real
+              performance.</span
+            >
+          </li>
+          <li>
+            <span class="tip-number">2</span>
+            <span
+              ><strong>A role gives the AI a personality.</strong> "Tiny
+              tactical hamster" is a role. The AI becomes that character and
+              speaks from inside it.</span
+            >
+          </li>
+          <li>
+            <span class="tip-number">3</span>
+            <span
+              ><strong>Specific in. Specific out.</strong> You can do this with
+              any word, any topic, any subject. You are not looking things up in
+              a dictionary. You are having a conversation.</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- HOMEWORK -->
+    <div class="section-full" id="homework">
+      <div class="inner">
+        <div class="section-label">Before Next Class</div>
+        <h2 class="section-title">Build a Stage. Defend It.</h2>
+
+        <div class="homework-box">
+          <h3>Your Assignment</h3>
+          <p>
+            Write ONE prompt that sets the stage as clearly as possible. Give it
+            a role. Give it context. Give it history. Make it strong.
+          </p>
+          <p>
+            Next class, Coach Shay will take your prompt and add ONE sentence
+            designed to break it or confuse the AI. A weak stage collapses. A
+            strong stage fights back.
+          </p>
+
+          <div class="example-prompt">
+            <strong style="color: var(--orange)">WEAK:</strong> "You are a chef.
+            What does the word hungry mean?"
+          </div>
+
+          <div class="example-prompt">
+            <strong style="color: var(--yellow)">STRONG:</strong> "You are a
+            chef who grew up in a tiny village in France. You cooked for your
+            grandmother every Sunday for fifteen years. Food is not just your
+            job, it is your whole life. What does the word hungry mean to you?"
+          </div>
+
+          <p>
+            Write your prompt. Bring it next class. Let's see who built the
+            strongest stage.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- GOOGLE FORM -->
+    <div class="form-section">
+      <div class="form-section-inner">
+        <div class="section-label">Feedback -- Private</div>
+        <h2 class="section-title">Tell Coach Shay</h2>
+        <p class="form-note">
+          Anonymous. No login. No name required. Korean is totally fine.
+        </p>
+        <div class="google-form-wrap">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfKSQEnOHze73oU7AHT72w5l5T0yMs9kW0RNkt0yb4uPXkCVQ/viewform?embedded=true"
+            width="100%"
+            height="1400"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            title="Coach Shay Lesson Feedback"
+          >
+            Loading...
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- QR MODAL -->
+    <div id="qr-modal">
+      <h2>Scan to Join</h2>
+      <div class="qr-placeholder">
+        <img
+          src="qr.png"
+          alt="QR Code"
+          style="
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 14px;
+          "
+        />
+      </div>
+      <button class="qr-close" id="qr-close">Close</button>
+    </div>
+
+    <script src="spy-responses.js"></script>
+    <script src="spy-builder.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
